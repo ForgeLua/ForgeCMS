@@ -1,15 +1,15 @@
 <div class="container py-4">
     <div class="p-5 mb-4 bg-image rounded-3" style="background-image: url('https://www.zupimages.net/up/23/26/1lc9.jpg'); background-size: cover;">
       <div class="container-fluid py-5">
-        <h2 class="display-5 fw-bold font-bliz-Large-white">Azzinoth</h2>
-        <p class="col-md-8 fs-6 font-bliz-light-medium-beige">Azzinoth vous propose un royaume <span class="wotlk-color">Wrath of the Lich King</span>, nous important des mécaniques de jeu et des modèles d'extensions supérieur à WotLK.</p>
+        <h2 class="display-5 fw-bold font-bliz-Large-white">ForgeCMS</h2>
+        <p class="col-md-8 fs-6 font-bliz-light-medium-beige">ForgeCMS offers you a CMS created from scratch in <span class="wotlk-color">Lua</span>, only for TrinityCore.</p>
 
         <% if not session.user then %>
             <a href="register" class="btn btn-primary btn-lg bliz-red-transparent-button me-2 mt-2" type="button">
-                S'inscrire
+                Register
             </a>
             <a href="login" class="btn btn-primary btn-lg bliz-orange-transparent-button me-2 mt-2" type="button">
-                Connexion
+                Login
             </a>
         <% end %>
       </div>
@@ -18,23 +18,23 @@
     <div class="row align-items-md-stretch mb-4">
       <div class="col-md-6">
         <div class="h-100 p-5 text-bg-dark rounded-3" style="background-image: url('https://bnetcmsus-a.akamaihd.net/cms/blog_header/4e/4E245ESWZ1R21684790548004.jpg'); background-size: cover; background-position: 50% 80%;">
-          <h2 class="fs-4 font-bliz-Large-white mt-5">Sésame level up moi ..</h2>
-          <p class="fs-6 font-bliz-light-medium-beige">Ah, le sésame, sûrement le premier système auquel on pense quand on parle d'expérience ou quand on pense à changer de serveur..</p>
+          <h2 class="fs-4 font-bliz-Large-white mt-5">Sesame level up me .</h2>
+          <p class="fs-6 font-bliz-light-medium-beige">Ah, sesame, surely the first system you think of when you think of experience or when you think of changing server...</p>
           <a href="login" class="btn btn-primary btn-lg bliz-orange-transparent-button me-2 mt-2" type="button">
-              En savoir plus
+              Read more
           </a>
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="h-100 p-5 bg-body-tertiary rounded-3"  style="background-image: url('https://bnetcmsus-a.akamaihd.net/cms/blog_header/pt/PTRW8RF7DHY01518537103986.jpg'); background-size: cover; background-position: 50% 50%;">
-          <h2 class="fs-4 font-bliz-Large-white mt-5">Nouveaux accés pour vos donjons</h2>
+          <h2 class="fs-4 font-bliz-Large-white mt-5">New accesses for your dungeons</h2>
           <p class="fs-6 font-bliz-light-medium-beige">
-            L'accès à vos donjons a changé, désormais certains haut fait vous sont demandés ..
+            Access to your dungeons has changed, and you're now required to do certain high-level ...
           </p>
 
         <a href="login" class="btn btn-primary btn-lg bliz-orange-transparent-button me-2 mt-2" type="button">
-            En savoir plus
+            Read more
         </a>
         </div>
       </div>
@@ -42,21 +42,14 @@
 
     <div class=" p-5 mb-4 bg-image rounded-3" style="background-image: url('https://www.zupimages.net/up/23/26/v764.png'); background-size: cover; background-position: 50% 50%;">
       <div class="container-fluid py-5">
-        <h2 class="display-5 fw-bold font-bliz-Large-white">La guilde des aventuriers est de retour !</h2>
-        <p class="col-md-8 fs-6 font-bliz-light-medium-beige">La guilde des aventuriers est désormais ouverte et dispose d’une multitude d’objets mystiques et magiques à ajouter à votre collection en échange de deniers, que vous pouvez obtenir grâce à diverses activités en jeu.</p>
-
-
-        <a href="login" class="btn btn-primary btn-lg bliz-orange-transparent-button me-2 mt-2" type="button">
-            Aperçu
-        </a>
-
-        <a href="login" class="btn btn-primary btn-lg bliz-orange-transparent-button me-2 mt-2" type="button">
-            Objets à la une
-        </a>
+        <h2 class="display-5 fw-bold font-bliz-Large-white">The Adventurers' Guild is back!</h2>
+        <p class="col-md-8 fs-6 font-bliz-light-medium-beige">The Adventurer's Guild is now open and features a host of mystical and magical items to add to your collection in exchange for denarii, which you can obtain through various in-game activities.</p>
+        <a href="login" class="btn btn-primary btn-lg bliz-orange-transparent-button me-2 mt-2" type="button">Preview</a>
+        <a href="login" class="btn btn-primary btn-lg bliz-orange-transparent-button me-2 mt-2" type="button">Featured items</a>
       </div>
     </div>
 
     <footer class="pt-3 mt-4 text-body-secondary">
-      Azzinoth © 2023
+      ForgeCMS © 2024
     </footer>
   </div>
