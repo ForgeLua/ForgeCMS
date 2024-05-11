@@ -1,0 +1,188 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+body {
+    background-image: url("https://assets.worldofwarcraft.blizzard.com/static/components/Pane/Pane-leather-gray-map.4f5e5cedac63202812029039fc0832f2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #100d0c;
+}
+
+.font-bliz-light-medium-beige {
+    font-size: 1.296rem;
+    line-height: 1.5;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    color: #ebdec2;
+    text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, .8);
+    font-weight: 400;
+}
+
+.font-bliz-Large-white {
+    font-size: 3.2249999999999996rem;
+    line-height: 1.5;
+    font-family: Semplicita Pro,Open Sans,Arial,Helvetica,sans-serif;
+    color: #fff;
+    text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0,0,0,.8);
+    font-weight: 700;
+}
+
+.bliz-orange-transparent-button {
+    border: 1px solid #c77e19;
+    padding: 12px 30px;
+    font-size: 1.08rem;
+    line-height: 1.5;
+    font-weight: 400;
+    background: rgba(0,0,0,.4);
+    color: #f7b10a;
+    min-width: 180px;
+    text-transform: uppercase;
+    -webkit-transition: background .2s,color .2s;
+    transition: background .2s,color .2s;
+}
+
+.bliz-orange-transparent-button:hover,
+.bliz-orange-transparent-button:focus,
+.bliz-orange-transparent-button:active {
+    background: #b06601 !important;
+    color: #ffd36b !important;
+    outline-width: 0 !important;
+    border: 1px solid #c77e19 !important;
+}
+
+.bliz-red-transparent-button {
+    border: 1px solid #ea3012;
+    padding: 12px 30px;
+    font-size: 1.08rem;
+    line-height: 1.5;
+    font-weight: 400;
+    background: rgba(159,22,0,.6);
+    color: #f7b10a;
+    min-width: 180px;
+    text-transform: uppercase;
+    -webkit-transition: background .2s,color .2s;
+    transition: background .2s,color .2s;
+}
+
+.bliz-red-transparent-button:hover,
+.bliz-red-transparent-button:focus,
+.bliz-red-transparent-button:active {
+    background: #9f1600 !important;
+    color: #ffd36b !important;
+    outline-width: 0 !important;
+    border: 1px solid #ea3012 !important;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    padding: 0.7em !important;
+    --bs-dropdown-bg: #100d0ccc;
+}
+
+.dropdown-item:hover, .nav-link:hover, .link:hover,
+.dropdown-item:focus, .nav-link:focus, .link:focus,
+.dropdown-item:active, .nav-link:active .link:active {
+    background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: inherit;
+}
+
+@media only screen and (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+    .dropdown-menu.show {
+        display: flex;
+    }
+}
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+}
+.dropdown-menu li .dropdown-item {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    color: white;
+}
+
+.dropdown-menu p {
+    font-family: Semplicita Pro,Open Sans,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 36px;
+}
+
+@media only screen and (max-width: 992px) {
+    .dropdown-menu.show {
+        flex-wrap: wrap;
+        max-height: 350px;
+        overflow-y: scroll;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1140px) {
+    .dropdown:hover .dropdown-menu {
+        width: 40vw;
+        flex-wrap: wrap;
+    }
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    padding: 0.5em 1em;
+}
+
+@media screen and (min-width: 993px) {
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+    .dropdown-menu.show {
+        display: flex;
+    }
+}
+@media screen and (max-width: 992px) {
+    .dropdown-menu.show {
+        max-height: 60vh;
+        overflow-y: scroll;
+    }
+}
+
+hr {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    color: white;
+}
+
+.news-container > h3 {
+    font-size: 1.728rem;
+    line-height: 1.5em;
+    font-family: Semplicita Pro,Open Sans,Arial,Helvetica,sans-serif;
+    color: #fff;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.news-container p {
+    margin-bottom: 1.75rem;
+    line-height: 1.75;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: opensans,sans-serif;
+    background-color: transparent;
+    color: #ebdec2;
+}
+
+.wotlk-color {
+    color: #5792d5;
+}
