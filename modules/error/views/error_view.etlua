@@ -1,0 +1,11 @@
+<div class="container py-4">
+    <div class="p-5 mb-4 bg-image rounded-3" style="background-image: url('https://bnetcmsus-a.akamaihd.net/cms/blog_header/j3/J3PFBLGVHW1C1516117521196.jpg'); background-size: cover; background-position: 50% 50%;">
+      <div class="container-fluid py-5">
+        <h2 class="display-5 fw-bold font-bliz-Large-white">Hurry up!</h2>
+        <p class="col-md-8 fs-6 font-bliz-light-medium-beige">You're not supposed to be here! This page is currently unavailable!</p>
+        <a href="<%= build_url( "/" ) %>" class="btn btn-primary btn-lg bliz-red-transparent-button me-2 mt-2" type="button">
+            Home
+        </a>
+      </div>
+    </div>
+</div>
