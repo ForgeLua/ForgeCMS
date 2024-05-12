@@ -8,7 +8,7 @@
 ]]--
 
 local lapis         = require("lapis")
-local modules       = require("config_modules")
+local modules       = require("forgecms").modules
 local app_helpers   = require("lapis.application")
 local respond_to    = require("lapis.application").respond_to
 

@@ -5,16 +5,15 @@ local cjson = require("cjson")
 
 local api_helper = {}
 
-local api_base = "http://10.0.0.30:4444"
 local headers  = {
     ["Content-Type"] = "application/json",
     ["Authorization"] = 
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYmYiOjE2OTc2MzY0NDAsImlzcyI6InNYTjhmdjNNS1Fid2thdEhKRE1ic3dlV3FYOURzejNtIiwiZXhwIjoxNzI5MTcyNDQwfQ._XpSFU1sxd2xVIBHPQ9GfuCOJDLlVmGYKDmW6vCYgRI"
+        "Bearer " .. require("forgecms").api.web.secret
 }
 
 function api_helper.get(endpoint)
     local response, status, headers = http.simple({
-        url     = api_base .. endpoint,
+        url     = require("forgecms").api.web.url .. endpoint,
         method  = "GET",
         headers = headers
     })
