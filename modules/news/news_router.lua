@@ -7,11 +7,15 @@
     @Contributors : M4v3r1ck0, alexis-piquet
 ]]--
 
-local controller   = require("modules.home.controllers.home_controller")
+local controller   = require("modules.news.controllers.news_controller")
 local respond_to   = require("lapis.application").respond_to
 
 return function(app)
-    app:match( "/", respond_to({
+    app:match( "/news", respond_to({
         GET = controller.index,
+    }))
+    
+    app:match("/news/:news_id", respond_to({
+        GET = controller.view
     }))
 end

@@ -1,5 +1,5 @@
 --[[
-    Copyright (C) 2024 ForgeCMS Authors and Contributors
+    Copyright (C) 2024 - ForgeCMS
     This program is free software licensed under the GNU General Public License v3.0 (GPL-3.0)
     Please see the included LICENSE file for more information
     
@@ -16,7 +16,7 @@ return function(app)
         GET = controller.index,
     }))
     
-    app.handle_404 = function (self)
+--[[     app.handle_404 = function (self)
         self.data = { code = 404 }
         return { render = view }
     end
@@ -24,5 +24,5 @@ return function(app)
     app.handle_500 = function (self)
         self.data = { code = 500 }
         return { render = view }
-    end
+    end ]]
 end

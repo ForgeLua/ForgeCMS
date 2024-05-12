@@ -1,0 +1,13 @@
+<div class="container py-4">
+    <div class="p-5 mb-4 bg-image rounded-3" style="background-image: url('<%= data.image %>'); background-size: cover; background-position: 50% 50%;">
+      <div class="container-fluid py-5">
+        <h2 class="display-5 fw-bold font-bliz-Large-white"><%- data.title %></h2>
+      </div>
+    </div>
+
+    <div class="container">
+        <article class="news-container">
+            <%- data.content %>
+        </article>
+    </div>
+</div>

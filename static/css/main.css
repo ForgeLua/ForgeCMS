@@ -1,3 +1,12 @@
+/*
+    Copyright (C) 2024 - ForgeCMS
+    This program is free software licensed under the GNU General Public License v3.0 (GPL-3.0)
+    Please see the included LICENSE file for more information
+
+    @Authors : iThorgrim
+    @Contributors : M4v3r1ck0, alexis-piquet
+*/
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 body {
@@ -14,6 +23,15 @@ body {
     color: #ebdec2;
     text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, .8);
     font-weight: 400;
+}
+
+.font-bliz-medium-white {
+    font-size: 2.2249999999999996rem;
+    line-height: 1.5;
+    font-family: Semplicita Pro,Open Sans,Arial,Helvetica,sans-serif;
+    color: #fff;
+    text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0,0,0,.8);
+    font-weight: 700;
 }
 
 .font-bliz-Large-white {

@@ -1,0 +1,44 @@
+<div class="container py-4">
+    <h2 class="display-5 fw-bold font-bliz-Large-white">Breaking news</h2>
+</div>
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-sm-8">
+            <% if not news_list then %>
+            <div class="ps-5 bg-image rounded-3 mt-2" style="background-image: url('https://bnetcmsus-a.akamaihd.net/cms/blog_header/1e/1E3UU0155J2P1669935877617.jpg'); background-size: cover; background-position: 50% 50%;">
+              <div class="container-fluid py-5">
+                <h2 class="display-5 fs-3 fw-bold font-bliz-Large-white">There is no news to show!</h2>
+                <a href="<%= build_url( "/" ) %>" class="btn btn-primary btn-lg bliz-orange-transparent-button me-2 mt-2" type="button">
+                    Go to home
+                </a>
+              </div>
+            </div>
+            <% else %>
+                <% for newsId, newsData in pairs(news_list) do %>
+                    <div class="ps-5 bg-image rounded-3 mt-2" style="background-image: url('<%= newsData.image %>'); background-size: cover; background-position: 50% 50%;">
+                      <div class="container-fluid py-5">
+                        <h2 class="display-5 fs-3 fw-bold font-bliz-Large-white"><%= newsData.title %></h2>
+                        <a href="news/<%= newsId %>" class="btn btn-primary btn-lg bliz-orange-transparent-button me-2 mt-2" type="button">
+                            Read more
+                        </a>
+                      </div>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-sm-4">
+          <h3 class="display-6 fw-bold font-bliz-medium-white">Recent news</h3>
+    
+          <% local displayed_recent_news = 0 %>
+          <% for newsId, newsData in pairs(news_list) do %>
+            <% if displayed_recent_news < 10 then %>
+              <h4><a class="font-bliz-Medium-white" href="news/<%= newsId %>"><%= newsData.title %></a></h4>
+              <p><%= newsData.date %> by <%= newsData.author %></p>
+              <% displayed_recent_news = displayed_recent_news + 1 %>
+            <% end %>
+          <% end %>
+        </div>
+    </div>
+   
+</div>
