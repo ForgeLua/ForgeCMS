@@ -11,6 +11,7 @@ local view          = require("modules.home.view")
 local controller    = { }
 
 function controller.index(self)
+    -- self.page_title = "Home"
     return { render = view }
 end
 

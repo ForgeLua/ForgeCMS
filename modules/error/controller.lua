@@ -11,6 +11,7 @@ local view          = require("modules.error.view")
 local controller    = { }
 
 function controller.index(self)
+    self.page_title = "Error"
     return { render = view }
 end
 

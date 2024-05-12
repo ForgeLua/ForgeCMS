@@ -16,7 +16,7 @@ local app = lapis.Application()
   app:enable("etlua")
   app.html   = require( "lapis.html" )
   app.layout = require( "views.base.layout" )
-  
+
 -- Declare and init modules / routers
 for _, module_name in pairs(modules) do
     local forge_module = require(string.format("modules.%s.router", module_name))

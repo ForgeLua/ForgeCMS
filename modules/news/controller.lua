@@ -13,6 +13,7 @@ local model         = require("modules.news.model")
 local controller    = { }
 
 function controller.index(self)
+    self.page_title = "Home"
     self.news_list = model.get_all()
     return { render = list }
 end
