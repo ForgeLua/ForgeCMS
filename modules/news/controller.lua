@@ -7,20 +7,20 @@
     @Contributors : M4v3r1ck0, alexis-piquet
 ]]--
 
-local index         = require("modules.news.views.news_index_view")
-local view          = require("modules.news.views.news_view")
-local model         = require("modules.news.models.news_model")
+local list          = require("modules.news.list")
+local index          = require("modules.news.index")
+local model         = require("modules.news.model")
 local controller    = { }
 
 function controller.index(self)
     self.news_list = model.get_all()
-    return { render = index }
+    return { render = list }
 end
 
 function controller.view(self)
     local news_id = tonumber(self.params.news_id)
     if (not news_id) then
-        return { render = index }
+        return { render = list }
     end
     
     local news = model.get(news_id)
@@ -29,7 +29,7 @@ function controller.view(self)
     end
     
     self.data = news
-    return { render = view }
+    return { render = index }
 end
 
 return controller

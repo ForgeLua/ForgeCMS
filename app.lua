@@ -19,7 +19,7 @@ local app = lapis.Application()
   
 -- Declare and init modules / routers
 for _, module_name in pairs(modules) do
-    local forge_module = require( string.format( "modules.%s.%s_router", module_name, module_name))
+    local forge_module = require(string.format("modules.%s.router", module_name))
     if ( forge_module ) then
       forge_module(app)
     end

@@ -7,11 +7,11 @@
     @Contributors : M4v3r1ck0, alexis-piquet
 ]]--
 
-local controller   = require("modules.home.controllers.home_controller")
-local respond_to   = require("lapis.application").respond_to
+local view          = require("modules.error.view")
+local controller    = { }
 
-return function(app)
-    app:match( "/", respond_to({
-        GET = controller.index,
-    }))
+function controller.index(self)
+    return { render = view }
 end
+
+return controller

@@ -1,4 +1,11 @@
--- api_helper.lua
+--[[
+    Copyright (C) 2024 - ForgeCMS
+    This program is free software licensed under the GNU General Public License v3.0 (GPL-3.0)
+    Please see the included LICENSE file for more information
+    
+    @Authors : iThorgrim
+    @Contributors : M4v3r1ck0, alexis-piquet
+]]--
 
 local http  = require("lapis.nginx.http")
 local cjson = require("cjson")

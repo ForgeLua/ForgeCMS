@@ -7,7 +7,7 @@
     @Contributors : M4v3r1ck0, alexis-piquet
 ]]--
 
-local view          = require("modules.home.views.home_view")
+local view          = require("modules.home.view")
 local controller    = { }
 
 function controller.index(self)
