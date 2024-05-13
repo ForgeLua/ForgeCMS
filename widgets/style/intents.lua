@@ -41,6 +41,5 @@ function GetIntents()
 end
 
 return {
-  default_intents = default_intents,
   GetIntents = GetIntents,
 }
