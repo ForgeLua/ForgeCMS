@@ -10,7 +10,7 @@ local dark = '#2c3e50'
 local light = '#2c3e50'
 local link = '#2c3e50'
 
-local default_intents = {
+local defaultIntents = {
   ['$primary'] = primary,
   ['$secondary'] = secondary,
   ['$success'] = success,
@@ -34,7 +34,7 @@ local default_intents = {
 
 function GetIntents()
   local intents = ''
-  for key, value in pairs(default_intents) do
+  for key, value in pairs(defaultIntents) do
     intents = intents .. string.format('$%s: %s;\n', key, value)
   end
   return intents

@@ -4,7 +4,7 @@ local sass = require('sass')
 function CompileSCSSWithVariables()
   local scss = io.open('styles/default.scss'):read('*all')
 
-  local modifed_scss = string.format([[
+  local modifedScss = string.format([[
     $color_1: #ebdec2;
     $color_2: #fff;
     $color_3: #f7b10a;
@@ -16,14 +16,14 @@ function CompileSCSSWithVariables()
     $font-family_3: opensans,sans-serif;
     $transparent: transparent;
     
-    // Intents
+    // INTENTS
     %s
 
     // SCSS
     %s
   ]], Intents.GetIntents(), scss)
 
-  return sass.compile_data(modifed_scss)
+  return sass.compile_data(modifedScss)
 end
 
 return {
