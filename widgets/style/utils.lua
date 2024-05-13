@@ -1,11 +1,10 @@
-local sass = require("sass")
+local Intents = require('widgets.style.intents')
+local sass = require('sass')
 
-function CompileSCSSWithVariables(primary_color, secondary_color)
+function CompileSCSSWithVariables()
   local scss = io.open("styles/default.scss"):read("*all")
 
   local modifed_scss = string.format([[
-    $primary_color: %s;
-    $secondary_color: %s;
     $color_1: #ebdec2;
     $color_2: #fff;
     $color_3: #f7b10a;
@@ -15,12 +14,18 @@ function CompileSCSSWithVariables(primary_color, secondary_color)
     $font-family_1: Open Sans, Arial, Helvetica, sans-serif;
     $font-family_2: Semplicita Pro,Open Sans,Arial,Helvetica,sans-serif;
     $font-family_3: opensans,sans-serif;
-    $background-color_1: transparent;
-
+    $transparent: transparent;
+    
+    // Intents
     %s
-  ]], primary_color, secondary_color, scss)
+
+    // SCSS
+    %s
+  ]], Intents.GetIntents(), scss)
 
   return sass.compile_data(modifed_scss)
 end
 
-return CompileSCSSWithVariables
+return {
+  CompileSCSSWithVariables = CompileSCSSWithVariables,
+}

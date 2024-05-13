@@ -1,7 +1,7 @@
-local CompileSCSSWithVariables = require("widgets.style.utils")
+local StyleUtils = require("widgets.style.utils")
 
 function Style()
-  local css = CompileSCSSWithVariables('#3366ff', '#ff3366')
+  local css = StyleUtils.CompileSCSSWithVariables()
   return string.format([[
     <style>
       %s
