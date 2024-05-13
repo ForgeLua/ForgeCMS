@@ -15,7 +15,7 @@ local respond_to    = require("lapis.application").respond_to
 local app = lapis.Application()
   app:enable("etlua")
   app.html   = require( "lapis.html" )
-  app.layout = require( "views.base.layout" )
+  app.layout = require( "layout.global" )
 
 -- Declare and init modules / routers
 for _, module_name in pairs(modules) do
