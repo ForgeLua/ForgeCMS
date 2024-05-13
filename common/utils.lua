@@ -1,5 +1,5 @@
 function HexToRgba(hex, opacity)
-  local hexRegex = "^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$"
+  local hexRegex = '^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$'
   if not string.match(hex, hexRegex) then
       return ''
   end
@@ -14,7 +14,7 @@ function HexToRgba(hex, opacity)
       g = tonumber(string.sub(hex, 3, 4), 16)
       b = tonumber(string.sub(hex, 5, 6), 16)
   end
-  return string.format("rgba(%d, %d, %d, %s)", r, g, b, opacity)
+  return string.format('rgba(%d, %d, %d, %s)', r, g, b, opacity)
 end
 
 return {

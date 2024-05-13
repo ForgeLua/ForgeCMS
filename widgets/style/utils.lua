@@ -2,7 +2,7 @@ local Intents = require('widgets.style.intents')
 local sass = require('sass')
 
 function CompileSCSSWithVariables()
-  local scss = io.open("styles/default.scss"):read("*all")
+  local scss = io.open('styles/default.scss'):read('*all')
 
   local modifed_scss = string.format([[
     $color_1: #ebdec2;

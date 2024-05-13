@@ -1,4 +1,4 @@
-local StyleUtils = require("widgets.style.utils")
+local StyleUtils = require('widgets.style.utils')
 
 function Style()
   local css = StyleUtils.CompileSCSSWithVariables()
