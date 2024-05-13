@@ -33,7 +33,7 @@ local default_intents = {
 }
 
 function GetIntents()
-  local intents = 'CommonUtils'
+  local intents = ''
   for key, value in pairs(default_intents) do
     intents = intents .. string.format('$%s: %s;\n', key, value)
   end
