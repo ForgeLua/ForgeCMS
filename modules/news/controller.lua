@@ -8,7 +8,7 @@
 ]]--
 
 local list          = require("modules.news.list")
-local index          = require("modules.news.index")
+local index         = require("modules.news.index")
 local model         = require("modules.news.model")
 local controller    = { }
 

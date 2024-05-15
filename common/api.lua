@@ -7,20 +7,21 @@
     @Contributors : M4v3r1ck0, alexis-piquet
 ]]--
 
-local http  = require("lapis.nginx.http")
-local cjson = require("cjson")
+local http   = require("lapis.nginx.http")
+local cjson  = require("cjson")
+local config = require("modules.admin.config.controller").loadConfig()
 
 local api_helper = {}
 
 local headers  = {
     ["Content-Type"] = "application/json",
     ["Authorization"] = 
-        "Bearer " .. require("forgecms").api.web.secret
+        "Bearer " .. config.WEB_API_SECRET
 }
 
 function api_helper.get(endpoint)
     local response, status, headers = http.simple({
-        url     = require("forgecms").api.web.url .. endpoint,
+        url     = config.WEB_API_URL .. endpoint,
         method  = "GET",
         headers = headers
     })

@@ -8,20 +8,25 @@
 ]]--
 
 local lapis         = require("lapis")
-local modules       = require("forgecms").modules
+-- local modules       = require("forgecms").modules
 local app_helpers   = require("lapis.application")
 local respond_to    = require("lapis.application").respond_to
+local util          = require("common.util")
 
 local app = lapis.Application()
   app:enable("etlua")
   app.html   = require( "lapis.html" )
   app.layout = require( "views.base.layout" )
 
--- Declare and init modules / routers
-for _, module_name in pairs(modules) do
-    local forge_module = require(string.format("modules.%s.router", module_name))
-    if ( forge_module ) then
-      forge_module(app)
+-- Declare and load modules
+app.modules = require("modules.admin.modules.controller").loadModules()
+
+-- Init router for modules
+for id, mod in pairs(app.modules) do
+    local router = util.require_module(mod).router
+    
+    if router then
+        router(app)
     end
 end
 

@@ -16,7 +16,7 @@ return function(app)
         GET = controller.index,
     }))
     
-    app.handle_404 = function (self)
+--[[     app.handle_404 = function (self)
         self.data = { code = 404 }
         return { render = view }
     end
@@ -29,5 +29,5 @@ return function(app)
     app.handle_500 = function (self)
         self.data = { code = 500 }
         return { render = view }
-    end
+    end ]]
 end

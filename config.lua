@@ -8,10 +8,16 @@
 ]]--
 
 local config = require("lapis.config")
+-- local env    = require("dotenv"):load()
 
 config("development", {
-  server = "nginx",
-  code_cache = "on",
-  num_workers = "1",
-  port = 8080
+    server = "nginx",
+    code_cache = "off",
+    num_workers = "1",
+    port = 8080,
+
+    sqlite = {
+        database = "forgecms.config",
+        -- open_flags = ...
+    }
 })

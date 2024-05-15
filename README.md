@@ -14,6 +14,7 @@ Leveraging technologies such as LuaJIT, LuaRocks, and Lapis, ForgeCMS follows th
 
 ## Installation (Work in Progress) 🚧
 Currently, the installation process for ForgeCMS is a work in progress. We are actively developing clear and user-friendly installation procedures for developers. Please stay tuned for updates on this section.
+
 Install lib and packages :
 ```sh
 sudo apt install libsass-dev
