@@ -17,7 +17,8 @@ Currently, the installation process for ForgeCMS is a work in progress. We are a
 
 Install lib and packages :
 ```sh
-sudo apt install libsass-dev
+sudo apt install libsass-dev libsqlite3-dev
+sudo luarocks install lsqlite3
 ```
 
 ## Usage 📝
