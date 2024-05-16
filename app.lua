@@ -16,7 +16,7 @@ local util          = require("common.util")
 local app = lapis.Application()
   app:enable("etlua")
   app.html   = require( "lapis.html" )
-  app.layout = require( "views.base.layout" )
+  app.layout = require( "layout.global" )
 
 -- Declare and load modules
 app.modules = require("modules.admin.modules.controller").loadModules()
