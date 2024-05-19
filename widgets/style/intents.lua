@@ -1,5 +1,7 @@
-local CommonUtils = require('common.utils')
+local commonUtils = require('common.utils')
+local intents = {}
 
+-- Couleurs sans point-virgule
 local primary = '#b39475'
 local secondary = '#abacb0'
 local success = '#27ae60'
@@ -7,8 +9,8 @@ local danger = '#9f1600'
 local warning = '#b06601'
 local info = '#3498db'
 local dark = '#2c3e50'
-local light = '#2c3e50'
-local link = '#2c3e50'
+local light = '#ecf0f1'
+local link = '#2980b9'
 
 local defaultIntents = {
   ['$primary'] = primary,
@@ -21,25 +23,23 @@ local defaultIntents = {
   ['$light'] = light,
   ['$link'] = link,
   ['$none'] = 'transparent',
-  ['$primary_light'] = CommonUtils.HexToRgba(primary, '.6'),
-  ['$secondary_light'] = CommonUtils.HexToRgba(secondary, '.6'),
-  ['$success_light'] = CommonUtils.HexToRgba(success, '.6'),
-  ['$danger_light'] = CommonUtils.HexToRgba(danger, '.6'),
-  ['$warning_light'] = CommonUtils.HexToRgba(warning, '.6'),
-  ['$info_light'] = CommonUtils.HexToRgba(info, '.6'),
-  ['$dark_light'] = CommonUtils.HexToRgba(dark, '.6'),
-  ['$light_light'] = CommonUtils.HexToRgba(light, '.6'),
-  ['$link_light'] = CommonUtils.HexToRgba(link, '.6'),
+  ['$primary_light'] = commonUtils.HexToRgba(primary, 0.6),
+  ['$secondary_light'] = commonUtils.HexToRgba(secondary, 0.6),
+  ['$success_light'] = commonUtils.HexToRgba(success, 0.6),
+  ['$danger_light'] = commonUtils.HexToRgba(danger, 0.6),
+  ['$warning_light'] = commonUtils.HexToRgba(warning, 0.6),
+  ['$info_light'] = commonUtils.HexToRgba(info, 0.6),
+  ['$dark_light'] = commonUtils.HexToRgba(dark, 0.6),
+  ['$light_light'] = commonUtils.HexToRgba(light, 0.6),
+  ['$link_light'] = commonUtils.HexToRgba(link, 0.6),
 }
 
-function GetIntents()
-  local intents = ''
+function intents.getIntents()
+  local intentsStr = ''
   for key, value in pairs(defaultIntents) do
-    intents = intents .. string.format('$%s: %s;\n', key, value)
+    intentsStr = intentsStr .. string.format('%s: %s;\n', key, value)
   end
-  return intents
+  return intentsStr
 end
 
-return {
-  GetIntents = GetIntents,
-}
+return intents

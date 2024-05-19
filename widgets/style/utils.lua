@@ -1,8 +1,17 @@
-local Intents = require('widgets.style.intents')
-local sass = require('sass')
+local intents = require('widgets.style.intents')
+local sass    = require('sass')
+local utils   = {}
 
-function CompileSCSSWithVariables()
-  local scss = io.open('styles/default.scss'):read('*all')
+function utils.compileSCSSWithVariables()
+  local scss_file = io.open('styles/default.scss', 'r')
+  local scss = nil
+
+  if not scss_file then
+    error("Could not open file 'styles/default.scss'")
+  else
+    scss = scss_file:read('*all')
+    scss_file:close()
+  end
 
   local modifedScss = string.format([[
     $color_1: #ebdec2;
@@ -21,11 +30,9 @@ function CompileSCSSWithVariables()
 
     // SCSS
     %s
-  ]], Intents.GetIntents(), scss)
+  ]], intents.getIntents(), scss)
 
-  return sass.compile_data(modifedScss)
+  return sass.compile(modifedScss, "compressed")
 end
 
-return {
-  CompileSCSSWithVariables = CompileSCSSWithVariables,
-}
+return utils
