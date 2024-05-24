@@ -37,7 +37,7 @@ function template.get_template_variables_by_id(id)
 end
 
 function template.get_active()
-  local active_template = model:extend('template'):find('active = ?', true)
+  local active_template = model:extend('template'):select('WHERE active = ?', true)
 	if active_template == nil then
 		error('No active template found')
 	end
