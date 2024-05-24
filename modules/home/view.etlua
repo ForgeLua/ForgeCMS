@@ -7,6 +7,8 @@
     @Contributors : M4v3r1ck0, alexis-piquet
 -->
 
+{{ include('widgets.button.index.lua') }}
+
 <div class="container py-4">
     <div class="p-5 mb-4 bg-image rounded-3" style="background-image: url('https://www.zupimages.net/up/23/26/1lc9.jpg'); background-size: cover;">
       <div class="container-fluid py-5">
@@ -14,12 +16,16 @@
         <p class="col-md-8 fs-6 font-bliz-light-medium-beige">ForgeCMS offers you a CMS created from scratch in <span class="wotlk-color">Lua</span>, only for TrinityCore.</p>
 
         <% if not session.user then %>
-            <a href="register" class="btn btn-primary btn-lg button button-red me-2 mt-2" type="button">
-                Register
-            </a>
-            <a href="login" class="btn btn-primary btn-lg button button-orange me-2 mt-2" type="button">
-                Login
-            </a>
+          {% button {
+              class = 'btn btn-primary btn-lg button button-red me-2 mt-2",
+              onclick = function() print('Register') end,
+              label = 'Register'
+          } %}
+          {% button {
+              class = 'btn btn-primary btn-lg button button-orange me-2 mt-2",
+              onclick = function() print('login') end,
+              label = 'Login'
+          } %}
         <% end %>
       </div>
     </div>
