@@ -11,7 +11,7 @@ local model  = require('lapis.db.model').Model
 local template = {}
 
 function template.get_template_variables_by_id(id)
-  local template_variables = model:extend('template_variables').find(id)
+  local template_variables = model:extend('template_variables'):select('WHERE id = ?',id)
 
   if template_variables then
     local variables = {
@@ -42,7 +42,7 @@ function template.get_active()
 		error('No active template found')
 	end
 
-  active_template.intents   = model:extend('template_intents'):find(active_template.id)
+  active_template.intents   = model:extend('template_intents'):select('WHERE id = ?', active_template.intents_id)
   active_template.variables = template.get_template_variables_by_id(active_template.id)
   return active_template
 end
