@@ -20,7 +20,7 @@ function utils.require_module(module_name)
     return module
 end
 
-function utils.HexToRgba(hex, opacity)
+function utils.hex_to_rgba(hex, opacity)
     hex = hex:gsub("#","")
     local r,g,b = tonumber("0x"..hex:sub(1,2)), tonumber("0x"..hex:sub(3,4)), tonumber("0x"..hex:sub(5,6))
     return string.format('rgba(%d, %d, %d, %.2f)', r, g, b, opacity)
