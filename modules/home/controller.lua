@@ -11,7 +11,8 @@ local view          = require("modules.home.view")
 local controller    = { }
 
 function controller.index(self)
-    -- self.page_title = "Home"
+    self.page_description = "Bienvenue sur notre site !"
+    self.page_keywords = "wow, world of warcraft, private server, wow private server, world of warcraft private server"
     return { render = view }
 end
 
