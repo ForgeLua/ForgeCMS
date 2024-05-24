@@ -36,10 +36,12 @@ function utils.compile_scss_with_variables()
     
     // INTENTS
     %s
-
+    
     // SCSS
     %s
-  ]], intents.get_intents(), scss)
+
+  ]],intents.get_intents(), scss)
+  print(modifedScss)
 
   return sass.compile(modifedScss, "compressed")
 end
