@@ -11,7 +11,7 @@ local model  = require('lapis.db.model').Model
 local template = {}
 
 function template.get_template_variables_by_id(id)
-  local template_variables = model:extend('template_variables'):select('WHERE id = ?',id)
+  local template_variables = model:extend('template_variables'):select('WHERE id = ?', id)
 
   if template_variables then
     local variables = {

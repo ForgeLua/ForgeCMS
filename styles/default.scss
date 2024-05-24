@@ -19,7 +19,9 @@ body {
 	line-height: 1.5;
 	font-family: $font-family_1;
 	color: $color_1;
-	text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, .8);
+	text-shadow:
+		0 0 1px transparent,
+		0 1px 2px rgba(0, 0, 0, 0.8);
 	font-weight: 400;
 }
 .font-bliz-medium-white {
@@ -27,7 +29,9 @@ body {
 	line-height: 1.5;
 	font-family: $font-family_2;
 	color: $color_2;
-	text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, .8);
+	text-shadow:
+		0 0 1px transparent,
+		0 1px 2px rgba(0, 0, 0, 0.8);
 	font-weight: 700;
 }
 .font-bliz-Large-white {
@@ -35,7 +39,9 @@ body {
 	line-height: 1.5;
 	font-family: $font-family_2;
 	color: $color_2;
-	text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, .8);
+	text-shadow:
+		0 0 1px transparent,
+		0 1px 2px rgba(0, 0, 0, 0.8);
 	font-weight: 700;
 }
 .button {
@@ -44,12 +50,31 @@ body {
 	font-size: 1.08rem;
 	line-height: 1.5;
 	font-weight: 400;
-	background: rgba(0,0,0,.4);
+	background: rgba(0, 0, 0, 0.4);
 	min-width: 180px;
 	text-transform: uppercase;
-	-webkit-transition: background .2s,color .2s;
-	transition: background .2s,color .2s;
-	&.button-orange {
+	-webkit-transition:
+		background 0.2s,
+		color 0.2s;
+	transition:
+		background 0.2s,
+		color 0.2s;
+	border-radius: 0.5em;
+	margin-top: 0.5em;
+	margin-right: 0.5em;
+	&.button-primary {
+		border: 1px solid #ea3012;
+		background: rgba(159, 22, 0, 0.6);
+		&:hover,
+		&:focus,
+		&:active {
+			background: #9f1600 !important;
+			color: $color_4 !important;
+			outline-width: 0 !important;
+			border: 1px solid #ea3012 !important;
+		}
+	}
+	&.button-secondary {
 		border: 1px solid #c77e19;
 		color: $color_3;
 		&:hover,
@@ -59,18 +84,6 @@ body {
 			color: $color_4 !important;
 			outline-width: 0 !important;
 			border: 1px solid #c77e19 !important;
-		}
-	}
-	&.button-red {
-		border: 1px solid #ea3012;
-		background: rgba(159,22,0,.6);
-		&:hover,
-		&:focus,
-		&:active {
-			background: #9f1600 !important;
-			color: $color_4 !important;
-			outline-width: 0 !important;
-			border: 1px solid #ea3012 !important;
 		}
 	}
 }
@@ -100,7 +113,7 @@ body {
 		font-weight: bold;
 		font-size: 1.1em;
 		text-transform: uppercase;
-		background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+		background: linear-gradient(180deg, #f1c22d 0, #ff7757 100%);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		line-height: 36px;
@@ -110,7 +123,7 @@ body {
 	&:hover,
 	&:focus,
 	&:active {
-		background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+		background: linear-gradient(180deg, #f1c22d 0, #ff7757 100%);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		text-shadow: inherit;
@@ -119,7 +132,7 @@ body {
 .nav-link {
 	&:hover,
 	&:focus {
-		background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+		background: linear-gradient(180deg, #f1c22d 0, #ff7757 100%);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		text-shadow: inherit;
@@ -127,7 +140,7 @@ body {
 	&:active {
 		.link {
 			&:active {
-				background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+				background: linear-gradient(180deg, #f1c22d 0, #ff7757 100%);
 				background-clip: text;
 				-webkit-text-fill-color: transparent;
 				text-shadow: inherit;
@@ -138,7 +151,7 @@ body {
 .link {
 	&:hover,
 	&:focus {
-		background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+		background: linear-gradient(180deg, #f1c22d 0, #ff7757 100%);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		text-shadow: inherit;
@@ -154,7 +167,7 @@ hr {
 	color: $color_5;
 }
 .news-container {
-	>h3 {
+	> h3 {
 		font-size: 1.728rem;
 		line-height: 1.5em;
 		font-family: $font-family_2;
