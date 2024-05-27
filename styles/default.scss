@@ -46,12 +46,7 @@ body {
 }
 .button {
 	color: $warning;
-	padding: 12px 30px;
-	font-size: 1.08rem;
-	line-height: 1.5;
-	font-weight: 400;
 	background: rgba(0, 0, 0, 0.4);
-	min-width: 180px;
 	text-transform: uppercase;
 	-webkit-transition:
 		background 0.2s,
@@ -62,28 +57,189 @@ body {
 	border-radius: 0.5em;
 	margin-top: 0.5em;
 	margin-right: 0.5em;
+	&:disabled {
+		cursor: not-allowed;
+	}
+	&.button-small {
+		padding: 0.5em 1.5em;
+		font-size: 0.8em;
+		line-height: 1;
+		font-weight: 200;
+		min-width: 90px;
+	}
+	&.button-large {
+		padding: 1em 3.5em;
+		font-size: 1.08rem;
+		line-height: 1.5;
+		font-weight: 400;
+		min-width: 180px;
+	}
 	&.button-primary {
-		background: $danger_light;
+		background-color: $primary_light;
 		border: 1px solid $danger;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $primary;
+		}
 		&:hover,
 		&:focus,
 		&:active {
-			background: $danger !important;
-			color: $secondary !important;
-			outline-width: 0 !important;
-			border-color: $danger_dark !important;
+			background: $danger;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $danger_dark;
 		}
 	}
 	&.button-secondary {
-		border: 1px solid $warning;
+		background-color: $secondary_light;
 		color: $warning;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $secondary;
+		}
 		&:hover,
 		&:focus,
 		&:active {
-			background: $warning_light !important;
-			color: $secondary !important;
-			outline-width: 0 !important;
-			border-color: $warning !important;
+			background: $warning_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $warning;
+		}
+	}
+	&.button-success {
+		background-color: $success_light;
+		color: $success;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $success;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $success_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $success;
+		}
+	}
+	&.button-danger {
+		background-color: $danger_light;
+		color: $danger;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $danger;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $danger_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $danger;
+		}
+	}
+	&.button-warning {
+		background-color: $warning_light;
+		color: $warning;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $warning;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $warning_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $warning;
+		}
+	}
+	&.button-info {
+		background-color: $info_light;
+		color: $info;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $info;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $info_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $info;
+		}
+	}
+	&.button-dark {
+		background-color: $dark_light;
+		color: $dark;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $dark;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $dark_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $dark;
+		}
+	}
+	&.button-light {
+		background-color: $light_light;
+		color: $light;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $light;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $light_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $light;
+		}
+	}
+	&.button-link {
+		background-color: $link_light;
+		color: $link;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $link;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $link_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $link;
+		}
+	}
+	&.button-none {
+		background-color: $none;
+		color: $dark;
+		border: 1px solid $dark_light;
+		&.button-outline {
+			background-color: $dark_light;
+			border-color: $none;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: $dark;
+			outline-width: 0;
 		}
 	}
 }
