@@ -188,6 +188,66 @@ hr {
 .wotlk-color {
 	color: $color_6;
 }
+.color_primary {
+	color: $primary;
+}
+.background_primary {
+	background-color: $primary;
+}
+.color_secondary {
+	color: $secondary;
+}
+.background_secondary {
+	background-color: $secondary;
+}
+.color_success {
+	color: $success;
+}
+.background_success {
+	background-color: $success;
+}
+.color_danger {
+	color: $danger;
+}
+.background_danger {
+	background-color: $danger;
+}
+.color_warning {
+	color: $warning;
+}
+.background_warning {
+	background-color: $warning;
+}
+.color_info {
+	color: $info;
+}
+.background_info {
+	background-color: $info;
+}
+.color_dark {
+	color: $dark;
+}
+.background_dark {
+	background-color: $dark;
+}
+.color_light {
+	color: $light;
+}
+.background_light {
+	background-color: $light;
+}
+.color_link {
+	color: $link;
+}
+.background_link {
+	background-color: $link;
+}
+.color_none {
+	color: $none;
+}
+.background_none {
+	background-color: $none;
+}
 @media only screen and (min-width: 992px) {
 	.dropdown {
 		&:hover {
