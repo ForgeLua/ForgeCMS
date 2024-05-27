@@ -18,7 +18,7 @@ body {
 	font-size: 1.296rem;
 	line-height: 1.5;
 	font-family: $font-family_1;
-	color: $color_1;
+	color: $primary;
 	text-shadow:
 		0 0 1px transparent,
 		0 1px 2px rgba(0, 0, 0, 0.8);
@@ -28,7 +28,7 @@ body {
 	font-size: 2.2249999999999996rem;
 	line-height: 1.5;
 	font-family: $font-family_2;
-	color: $color_2;
+	color: $light;
 	text-shadow:
 		0 0 1px transparent,
 		0 1px 2px rgba(0, 0, 0, 0.8);
@@ -38,14 +38,14 @@ body {
 	font-size: 3.2249999999999996rem;
 	line-height: 1.5;
 	font-family: $font-family_2;
-	color: $color_2;
+	color: $light;
 	text-shadow:
 		0 0 1px transparent,
 		0 1px 2px rgba(0, 0, 0, 0.8);
 	font-weight: 700;
 }
 .button {
-	color: $color_3;
+	color: $warning;
 	padding: 12px 30px;
 	font-size: 1.08rem;
 	line-height: 1.5;
@@ -63,27 +63,27 @@ body {
 	margin-top: 0.5em;
 	margin-right: 0.5em;
 	&.button-primary {
-		border: 1px solid #ea3012;
-		background: rgba(159, 22, 0, 0.6);
+		background: $danger_light;
+		border: 1px solid $danger;
 		&:hover,
 		&:focus,
 		&:active {
-			background: #9f1600 !important;
-			color: $color_4 !important;
+			background: $danger !important;
+			color: $secondary !important;
 			outline-width: 0 !important;
-			border: 1px solid #ea3012 !important;
+			border-color: $danger_dark !important;
 		}
 	}
 	&.button-secondary {
-		border: 1px solid #c77e19;
-		color: $color_3;
+		border: 1px solid $warning;
+		color: $warning;
 		&:hover,
 		&:focus,
 		&:active {
-			background: #b06601 !important;
-			color: $color_4 !important;
+			background: $warning_light !important;
+			color: $secondary !important;
 			outline-width: 0 !important;
-			border: 1px solid #c77e19 !important;
+			border-color: $warning !important;
 		}
 	}
 }
@@ -102,7 +102,7 @@ body {
 		.dropdown-item {
 			font-size: 1em;
 			padding: 0.5em 1em;
-			color: $color_5;
+			color: white;
 		}
 		a {
 			padding: 0.5em 1em;
@@ -164,14 +164,14 @@ hr {
 	background-repeat: no-repeat;
 	background-position: 50%;
 	background-size: contain;
-	color: $color_5;
+	color: white;
 }
 .news-container {
 	> h3 {
 		font-size: 1.728rem;
 		line-height: 1.5em;
 		font-family: $font-family_2;
-		color: $color_2;
+		color: $light;
 		font-weight: 700;
 		text-transform: none;
 	}
@@ -181,12 +181,12 @@ hr {
 		font-size: 16px;
 		font-weight: 200;
 		font-family: $font-family_3;
-		background-color: $transparent;
-		color: $color_1;
+		background-color: $none;
+		color: $primary;
 	}
 }
 .wotlk-color {
-	color: $color_6;
+	color: $info;
 }
 .color_primary {
 	color: $primary;
@@ -195,10 +195,10 @@ hr {
 	background-color: $primary;
 }
 .color_secondary {
-	color: $secondary;
+	color: $light;
 }
 .background_secondary {
-	background-color: $secondary;
+	background-color: $light;
 }
 .color_success {
 	color: $success;
