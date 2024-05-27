@@ -14,10 +14,10 @@
         <p class="col-md-8 fs-6 font-bliz-light-medium-beige">ForgeCMS offers you a CMS created from scratch in <span class="wotlk-color">Lua</span>, only for TrinityCore.</p>
 
         <% if not session.user then %>
-            <a href="register" class="btn btn-primary btn-lg button button-red me-2 mt-2" type="button">
+            <a href="register" class="btn btn-primary btn-lg button button-primary me-2 mt-2" type="button">
                 Register
             </a>
-            <a href="login" class="btn btn-primary btn-lg button button-orange me-2 mt-2" type="button">
+            <a href="login" class="btn btn-primary btn-lg button button-secondary me-2 mt-2" type="button">
                 Login
             </a>
         <% end %>
@@ -29,7 +29,7 @@
         <div class="h-100 p-5 text-bg-dark rounded-3" style="background-image: url('https://bnetcmsus-a.akamaihd.net/cms/blog_header/4e/4E245ESWZ1R21684790548004.jpg'); background-size: cover; background-position: 50% 80%;">
           <h2 class="fs-4 font-bliz-Large-white mt-5">Sesame level up me .</h2>
           <p class="fs-6 font-bliz-light-medium-beige">Ah, sesame, surely the first system you think of when you think of experience or when you think of changing server...</p>
-          <a href="login" class="btn btn-primary btn-lg button button-orange me-2 mt-2" type="button">
+          <a href="login" class="btn btn-primary btn-lg button button-secondary me-2 mt-2" type="button">
               Read more
           </a>
         </div>
@@ -42,7 +42,7 @@
             Access to your dungeons has changed, and you're now required to do certain high-level ...
           </p>
 
-        <a href="login" class="btn btn-primary btn-lg button button-orange me-2 mt-2" type="button">
+        <a href="login" class="btn btn-primary btn-lg button button-secondary me-2 mt-2" type="button">
             Read more
         </a>
         </div>
@@ -53,8 +53,8 @@
       <div class="container-fluid py-5">
         <h2 class="display-5 fw-bold font-bliz-Large-white">The Adventurers' Guild is back!</h2>
         <p class="col-md-8 fs-6 font-bliz-light-medium-beige">The Adventurer's Guild is now open and features a host of mystical and magical items to add to your collection in exchange for denarii, which you can obtain through various in-game activities.</p>
-        <a href="login" class="btn btn-primary btn-lg button button-orange me-2 mt-2" type="button">Preview</a>
-        <a href="login" class="btn btn-primary btn-lg button button-orange me-2 mt-2" type="button">Featured items</a>
+        <a href="login" class="btn btn-primary btn-lg button button-secondary me-2 mt-2" type="button">Preview</a>
+        <a href="login" class="btn btn-primary btn-lg button button-secondary me-2 mt-2" type="button">Featured items</a>
       </div>
     </div>
   </div>
