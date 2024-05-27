@@ -5,14 +5,14 @@ local widget_button = widget:extend(function(props)
   assert(props.label, "Label is required")
   assert(props.onclick, "Onclick is required")
   local class = "button "
-  class = class .. (props.intent and props.intent == 'primary' and "button-primary " or "")
-  class = class .. (props.intent and props.intent == 'secondary' and "button-secondary " or "")
-  class = class .. (props.size and props.size == 'small' and "btn-sm " or "")
-  class = class .. (props.size and props.size == 'large' and "btn-lg " or "")
+  class = class .. (props.intent and "button-" .. props.intent .. " " or "button-primary ")
+  class = class .. (props.size == 'small' and "button-small " or "button-large ")
+  class = class .. (props.outline and "button-outline " or "")
   return button({
     type = "button",
     class = class,
     label = props.label,
+    disabled = props.disabled,
     onclick = props.onclick
   }, string.format("%s", props.label))
 end)
