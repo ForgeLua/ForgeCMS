@@ -32,14 +32,18 @@ function intents.get_intents()
     ['$none'] = active_template.intents.none
   }
 
+  local intents = {}
   for key, value in pairs(template_intents) do
-    if value ~= nil then
-      template_intents[key .. "_light"] = common_utils.hex_to_rgba(value, 0.6)
+    if value then
+      intents[key] = value
+      if key ~= '$none' then
+        intents[key .. "_light"] = common_utils.hex_to_rgba(value, 0.6)
+      end
     end
   end
 
   local strigify_intents = ''
-  for key, value in pairs(template_intents) do
+  for key, value in pairs(intents) do
     strigify_intents = strigify_intents .. string.format('%s: %s;\n', key, value)
   end
   return strigify_intents
