@@ -11,6 +11,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <% if page_description then %>
+            <meta name="description" content="<%= page_description %>">
+        <% end %>
+        <% if page_keywords then %>
+            <meta name="keywords" content="<%= page_keywords %>">
+        <% end %>
+        <% if page_author then %>
+            <meta name="author" content="<%= page_author %>">
+        <% end %>
 
         <title>ForgeCMS <%= page_title and " - " .. page_title or "" %></title>
 
