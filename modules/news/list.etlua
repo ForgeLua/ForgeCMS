@@ -24,9 +24,10 @@
                         <h2 class="display-5 fs-3 fw-bold font-bliz-Large-white"><%= newsData.title %></h2>
                         <%- require("widgets.button.index")({
                           intent = "secondary",
-                          label = "Read more",
                           onclick = "window.location = '" .. '/news/' .. newsId .. "'",
-                          size = "small"
+                          outline = "true",
+                          label = "Read more",
+                          size = "large"
                         }):render_to_string() %>
                       </div>
                     </div>
@@ -39,7 +40,11 @@
           <% local displayed_recent_news = 0 %>
           <% for newsId, newsData in pairs(news_list) do %>
             <% if displayed_recent_news < 10 then %>
-              <h4><a class="font-bliz-Medium-white" href="news/<%= newsId %>"><%= newsData.title %></a></h4>
+              <h4>
+              <%- require("widgets.link.index")({
+                label = "".. newsData.title .."",
+                href = "".. 'news/' .. newsId .."",
+              }):render_to_string() %>
               <p><%= newsData.date %> by <%= newsData.author %></p>
               <% displayed_recent_news = displayed_recent_news + 1 %>
             <% end %>
