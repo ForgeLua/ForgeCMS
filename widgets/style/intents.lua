@@ -37,7 +37,8 @@ function intents.get_intents()
     if value then
       intents[key] = value
       if key ~= '$none' then
-        intents[key .. "_light"] = common_utils.hex_to_rgba(value, 0.6)
+        intents[key .. "_light"] = common_utils.hex_to_rgba(value, 0.4)
+        intents[key .. "_dark"] = string.format('darken(%s, 10%%)', value)
       end
     end
   end
