@@ -14,12 +14,18 @@
         <p class="col-md-8 fs-6 font-bliz-light-medium-beige">ForgeCMS offers you a CMS created from scratch in <span class="wotlk-color">Lua</span>, only for TrinityCore.</p>
 
         <% if not session.user then %>
-            <a href="register" class="btn btn-primary btn-lg button button-primary me-2 mt-2" type="button">
-                Register
-            </a>
-            <a href="login" class="btn btn-primary btn-lg button button-secondary me-2 mt-2" type="button">
-                Login
-            </a>
+          <%- require("widgets.button.index")({
+            intent = "primary",
+            onclick = "window.location = '/register'",
+            label = "Register",
+            size = "large"
+          }):render_to_string() %>
+          <%- require("widgets.button.index")({
+            intent = "secondary",
+            onclick = "window.location = '/login'",
+            label = "Login",
+            size = "large"
+          }):render_to_string() %>
         <% end %>
       </div>
     </div>
@@ -41,10 +47,12 @@
           <p class="fs-6 font-bliz-light-medium-beige">
             Access to your dungeons has changed, and you're now required to do certain high-level ...
           </p>
-
-        <a href="login" class="btn btn-primary btn-lg button button-secondary me-2 mt-2" type="button">
-            Read more
-        </a>
+          <%- require("widgets.button.index")({
+            intent = "secondary",
+            label = "Read more",
+            onclick = "console.log('Read more')",
+            size = "large"
+          }):render_to_string() %>
         </div>
       </div>
     </div>

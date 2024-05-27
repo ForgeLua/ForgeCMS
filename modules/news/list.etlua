@@ -9,9 +9,12 @@
             <div class="ps-5 bg-image rounded-3 mt-2" style="background-image: url('https://bnetcmsus-a.akamaihd.net/cms/blog_header/1e/1E3UU0155J2P1669935877617.jpg'); background-size: cover; background-position: 50% 50%;">
               <div class="container-fluid py-5">
                 <h2 class="display-5 fs-3 fw-bold font-bliz-Large-white">There is no news to show!</h2>
-                <a href="<%= build_url( "/" ) %>" class="btn btn-primary btn-lg button button-secondary me-2 mt-2" type="button">
-                    Go to home
-                </a>
+                <%- require("widgets.button.index")({
+                  intent = "secondary",
+                  label = "Go to home",
+                  onclick = "window.location = '/'",
+                  size = "small"
+                }):render_to_string() %>
               </div>
             </div>
             <% else %>
@@ -19,9 +22,12 @@
                     <div class="ps-5 bg-image rounded-3 mt-2" style="background-image: url('<%= newsData.image %>'); background-size: cover; background-position: 50% 50%;">
                       <div class="container-fluid py-5">
                         <h2 class="display-5 fs-3 fw-bold font-bliz-Large-white"><%= newsData.title %></h2>
-                        <a href="news/<%= newsId %>" class="btn btn-primary btn-lg button button-secondary me-2 mt-2" type="button">
-                            Read more
-                        </a>
+                        <%- require("widgets.button.index")({
+                          intent = "secondary",
+                          label = "Read more",
+                          onclick = "window.location = '" .. '/news/' .. newsId .. "'",
+                          size = "small"
+                        }):render_to_string() %>
                       </div>
                     </div>
                 <% end %>
