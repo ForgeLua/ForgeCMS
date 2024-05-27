@@ -12,9 +12,12 @@
       <div class="container-fluid py-5">
         <h2 class="display-5 fw-bold font-bliz-Large-white">Hurry up!</h2>
         <p class="col-md-8 fs-6 font-bliz-light-medium-beige">You're not supposed to be here! This page is currently unavailable!</p>
-        <a href="<%= build_url( "/" ) %>" class="btn btn-primary btn-lg button button-red me-2 mt-2" type="button">
-            Home
-        </a>
+        <%- require("widgets.button.index")({
+          intent = "primary",
+          label = "Home",
+          onclick = "window.location = '/'",
+          size = "large"
+        }):render_to_string() %>
       </div>
     </div>
 </div>
