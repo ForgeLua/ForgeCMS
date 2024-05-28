@@ -18,59 +18,228 @@ body {
 	font-size: 1.296rem;
 	line-height: 1.5;
 	font-family: $font-family_1;
-	color: $color_1;
-	text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, .8);
+	color: $primary;
+	text-shadow:
+		0 0 1px transparent,
+		0 1px 2px rgba(0, 0, 0, 0.8);
 	font-weight: 400;
 }
 .font-bliz-medium-white {
 	font-size: 2.2249999999999996rem;
 	line-height: 1.5;
 	font-family: $font-family_2;
-	color: $color_2;
-	text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, .8);
+	color: $light;
+	text-shadow:
+		0 0 1px transparent,
+		0 1px 2px rgba(0, 0, 0, 0.8);
 	font-weight: 700;
 }
 .font-bliz-Large-white {
 	font-size: 3.2249999999999996rem;
 	line-height: 1.5;
 	font-family: $font-family_2;
-	color: $color_2;
-	text-shadow: 0 0 1px transparent, 0 1px 2px rgba(0, 0, 0, .8);
+	color: $light;
+	text-shadow:
+		0 0 1px transparent,
+		0 1px 2px rgba(0, 0, 0, 0.8);
 	font-weight: 700;
 }
 .button {
-	color: $color_3;
-	padding: 12px 30px;
-	font-size: 1.08rem;
-	line-height: 1.5;
-	font-weight: 400;
-	background: rgba(0,0,0,.4);
-	min-width: 180px;
+	color: $warning;
+	background: rgba(0, 0, 0, 0.4);
 	text-transform: uppercase;
-	-webkit-transition: background .2s,color .2s;
-	transition: background .2s,color .2s;
-	&.button-orange {
-		border: 1px solid #c77e19;
-		color: $color_3;
+	-webkit-transition:
+		background 0.2s,
+		color 0.2s;
+	transition:
+		background 0.2s,
+		color 0.2s;
+	border-radius: 0.5em;
+	margin-top: 0.5em;
+	margin-right: 0.5em;
+	&:disabled {
+		cursor: not-allowed;
+	}
+	&.button-small {
+		padding: 0.5em 1.5em;
+		font-size: 0.8em;
+		line-height: 1;
+		font-weight: 200;
+		min-width: 90px;
+	}
+	&.button-large {
+		padding: 1em 3.5em;
+		font-size: 1.08rem;
+		line-height: 1.5;
+		font-weight: 400;
+		min-width: 180px;
+	}
+	&.button-primary {
+		background-color: $primary_light;
+		border: 1px solid $danger;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $primary;
+		}
 		&:hover,
 		&:focus,
 		&:active {
-			background: #b06601 !important;
-			color: $color_4 !important;
-			outline-width: 0 !important;
-			border: 1px solid #c77e19 !important;
+			background: $danger;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $danger_dark;
 		}
 	}
-	&.button-red {
-		border: 1px solid #ea3012;
-		background: rgba(159,22,0,.6);
+	&.button-secondary {
+		background-color: $secondary_light;
+		color: $warning;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $secondary;
+		}
 		&:hover,
 		&:focus,
 		&:active {
-			background: #9f1600 !important;
-			color: $color_4 !important;
-			outline-width: 0 !important;
-			border: 1px solid #ea3012 !important;
+			background: $warning_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $warning;
+		}
+	}
+	&.button-success {
+		background-color: $success_light;
+		color: $success;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $success;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $success_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $success;
+		}
+	}
+	&.button-danger {
+		background-color: $danger_light;
+		color: $danger;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $danger;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $danger_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $danger;
+		}
+	}
+	&.button-warning {
+		background-color: $warning_light;
+		color: $warning;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $warning;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $warning_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $warning;
+		}
+	}
+	&.button-info {
+		background-color: $info_light;
+		color: $info;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $info;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $info_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $info;
+		}
+	}
+	&.button-dark {
+		background-color: $dark_light;
+		color: $dark;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $dark;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $dark_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $dark;
+		}
+	}
+	&.button-light {
+		background-color: $light_light;
+		color: $light;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $light;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $light_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $light;
+		}
+	}
+	&.button-link {
+		background-color: $link_light;
+		color: $link;
+		border: 1px solid $none;
+		&.button-outline {
+			background-color: $none;
+			border-color: $link;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			background: $link_light;
+			color: $secondary;
+			outline-width: 0;
+			border-color: $link;
+		}
+	}
+	&.button-none {
+		background-color: $none;
+		color: $dark;
+		border: 1px solid $dark_light;
+		&.button-outline {
+			background-color: $dark_light;
+			border-color: $none;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			color: $dark;
+			outline-width: 0;
 		}
 	}
 }
@@ -89,7 +258,7 @@ body {
 		.dropdown-item {
 			font-size: 1em;
 			padding: 0.5em 1em;
-			color: $color_5;
+			color: white;
 		}
 		a {
 			padding: 0.5em 1em;
@@ -100,7 +269,7 @@ body {
 		font-weight: bold;
 		font-size: 1.1em;
 		text-transform: uppercase;
-		background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+		background: linear-gradient(180deg, #f1c22d 0, #ff7757 100%);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		line-height: 36px;
@@ -110,7 +279,7 @@ body {
 	&:hover,
 	&:focus,
 	&:active {
-		background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+		background: linear-gradient(180deg, #f1c22d 0, #ff7757 100%);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		text-shadow: inherit;
@@ -119,7 +288,7 @@ body {
 .nav-link {
 	&:hover,
 	&:focus {
-		background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+		background: linear-gradient(180deg, #f1c22d 0, #ff7757 100%);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		text-shadow: inherit;
@@ -127,7 +296,7 @@ body {
 	&:active {
 		.link {
 			&:active {
-				background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+				background: linear-gradient(180deg, #f1c22d 0, #ff7757 100%);
 				background-clip: text;
 				-webkit-text-fill-color: transparent;
 				text-shadow: inherit;
@@ -138,7 +307,7 @@ body {
 .link {
 	&:hover,
 	&:focus {
-		background: linear-gradient(180deg,#f1c22d 0,#ff7757 100%);
+		background: linear-gradient(180deg, #f1c22d 0, #ff7757 100%);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		text-shadow: inherit;
@@ -151,14 +320,14 @@ hr {
 	background-repeat: no-repeat;
 	background-position: 50%;
 	background-size: contain;
-	color: $color_5;
+	color: white;
 }
 .news-container {
-	>h3 {
+	> h3 {
 		font-size: 1.728rem;
 		line-height: 1.5em;
 		font-family: $font-family_2;
-		color: $color_2;
+		color: $light;
 		font-weight: 700;
 		text-transform: none;
 	}
@@ -168,12 +337,72 @@ hr {
 		font-size: 16px;
 		font-weight: 200;
 		font-family: $font-family_3;
-		background-color: $transparent;
-		color: $color_1;
+		background-color: $none;
+		color: $primary;
 	}
 }
 .wotlk-color {
-	color: $color_6;
+	color: $info;
+}
+.color_primary {
+	color: $primary;
+}
+.background_primary {
+	background-color: $primary;
+}
+.color_secondary {
+	color: $light;
+}
+.background_secondary {
+	background-color: $light;
+}
+.color_success {
+	color: $success;
+}
+.background_success {
+	background-color: $success;
+}
+.color_danger {
+	color: $danger;
+}
+.background_danger {
+	background-color: $danger;
+}
+.color_warning {
+	color: $warning;
+}
+.background_warning {
+	background-color: $warning;
+}
+.color_info {
+	color: $info;
+}
+.background_info {
+	background-color: $info;
+}
+.color_dark {
+	color: $dark;
+}
+.background_dark {
+	background-color: $dark;
+}
+.color_light {
+	color: $light;
+}
+.background_light {
+	background-color: $light;
+}
+.color_link {
+	color: $link;
+}
+.background_link {
+	background-color: $link;
+}
+.color_none {
+	color: $none;
+}
+.background_none {
+	background-color: $none;
 }
 @media only screen and (min-width: 992px) {
 	.dropdown {

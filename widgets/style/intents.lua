@@ -1,45 +1,52 @@
-local commonUtils = require('common.utils')
+--[[
+    Copyright (C) 2024 - ForgeCMS
+    This program is free software licensed under the GNU General Public License v3.0 (GPL-3.0)
+    Please see the included LICENSE file for more information
+    
+    @Authors : iThorgrim
+    @Contributors : M4v3r1ck0, alexis-piquet
+]]--
+
+local common_utils = require('common.utils')
+local template = require("common.template")
+
 local intents = {}
 
--- Couleurs sans point-virgule
-local primary = '#b39475'
-local secondary = '#abacb0'
-local success = '#27ae60'
-local danger = '#9f1600'
-local warning = '#b06601'
-local info = '#3498db'
-local dark = '#2c3e50'
-local light = '#ecf0f1'
-local link = '#2980b9'
-
-local defaultIntents = {
-  ['$primary'] = primary,
-  ['$secondary'] = secondary,
-  ['$success'] = success,
-  ['$danger'] = danger,
-  ['$warning'] = warning,
-  ['$info'] = info,
-  ['$dark'] = dark,
-  ['$light'] = light,
-  ['$link'] = link,
-  ['$none'] = 'transparent',
-  ['$primary_light'] = commonUtils.HexToRgba(primary, 0.6),
-  ['$secondary_light'] = commonUtils.HexToRgba(secondary, 0.6),
-  ['$success_light'] = commonUtils.HexToRgba(success, 0.6),
-  ['$danger_light'] = commonUtils.HexToRgba(danger, 0.6),
-  ['$warning_light'] = commonUtils.HexToRgba(warning, 0.6),
-  ['$info_light'] = commonUtils.HexToRgba(info, 0.6),
-  ['$dark_light'] = commonUtils.HexToRgba(dark, 0.6),
-  ['$light_light'] = commonUtils.HexToRgba(light, 0.6),
-  ['$link_light'] = commonUtils.HexToRgba(link, 0.6),
-}
-
-function intents.getIntents()
-  local intentsStr = ''
-  for key, value in pairs(defaultIntents) do
-    intentsStr = intentsStr .. string.format('%s: %s;\n', key, value)
+function intents.get_intents()
+  local active_template = template.get_active()
+  if active_template == nil then
+    return ""
   end
-  return intentsStr
+
+  local template_intents = {
+    ['$primary'] = active_template.intents.primary,
+    ['$secondary'] = active_template.intents.secondary,
+    ['$success'] = active_template.intents.success,
+    ['$danger'] = active_template.intents.danger,
+    ['$warning'] = active_template.intents.warning,
+    ['$info'] = active_template.intents.info,
+    ['$dark'] = active_template.intents.dark,
+    ['$light'] = active_template.intents.light,
+    ['$link'] = active_template.intents.link,
+    ['$none'] = active_template.intents.none
+  }
+
+  local intents = {}
+  for key, value in pairs(template_intents) do
+    if value then
+      intents[key] = value
+      if key ~= '$none' then
+        intents[key .. "_light"] = common_utils.hex_to_rgba(value, 0.4)
+        intents[key .. "_dark"] = string.format('darken(%s, 10%%)', value)
+      end
+    end
+  end
+
+  local strigify_intents = ''
+  for key, value in pairs(intents) do
+    strigify_intents = strigify_intents .. string.format('%s: %s;\n', key, value)
+  end
+  return strigify_intents
 end
 
 return intents
