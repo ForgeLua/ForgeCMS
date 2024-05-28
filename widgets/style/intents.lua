@@ -15,7 +15,6 @@ local intents = {}
 function intents.get_intents()
   local active_template = template.get_active()
   if active_template == nil then
-    print("active_template is nil")
     return ""
   end
 
