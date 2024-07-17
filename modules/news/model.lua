@@ -11,11 +11,11 @@ local api = require("common.api")
 local model = { }
 
 function model.get_all()
-    return api.get(1, "/news")
+    return api.get("news", "/news")
 end
 
 function model.get(id)
-    return api.get(1, "/news/" .. id)
+    return api.get("news", "/news/" .. id)
 end
 
 return model

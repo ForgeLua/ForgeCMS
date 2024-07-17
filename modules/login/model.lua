@@ -11,7 +11,7 @@ local api = require("common.api")
 local model = { }
 
 function model.get_by_username(username)
-    return api.get(2, string.format("/account/%s", username))
+    return api.get("auth", string.format("/account/%s", username))
 end
 
 return model

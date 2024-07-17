@@ -11,11 +11,11 @@ local api = require("common.api")
 local model = { }
 
 function model.get_by_username(username)
-    return api.get(2, string.format("/account/%s", username))
+    return api.get("auth", string.format("/account/%s", username))
 end
 
 function model.create_account(username, salt, verifier)
-    api.post(2, "/account", {username = username, salt = salt, verifier = verifier})
+    api.post("auth", "/account", {username = username, salt = salt, verifier = verifier})
 end
 
 return model
