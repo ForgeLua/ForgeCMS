@@ -2,16 +2,16 @@
     Copyright (C) 2024 - ForgeCMS
     This program is free software licensed under the GNU General Public License v3.0 (GPL-3.0)
     Please see the included LICENSE file for more information
-    
+
     @Authors : iThorgrim
     @Contributors : M4v3r1ck0, alexis-piquet
 ]]--
 
-local controller   = require("modules.home.controller")
-local respond_to   = require("lapis.application").respond_to
+local api = require("common.api")
+local model = { }
 
-return function(app)
-    app:match( "home", "/", respond_to({
-        GET = controller.index,
-    }))
+function model.get_by_username(username)
+    return api.get(2, string.format("/account/%s", username))
 end
+
+return model

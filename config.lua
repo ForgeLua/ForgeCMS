@@ -16,6 +16,9 @@ config("development", {
     num_workers = "1",
     port = 8080,
 
+    session_name = "forge_cms_cookies",
+    secret = "random_123+456=789",
+
     sqlite = {
         database = "forgecms.config",
         -- open_flags = ...

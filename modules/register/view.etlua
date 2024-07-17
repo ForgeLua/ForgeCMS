@@ -1,0 +1,36 @@
+<div class="container login-form">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-md-9 col-lg-6 col-xl-5">
+      <div class="blur-round" style="background: linear-gradient(147deg, rgba(255, 0, 150, 0.7), rgba(0, 229, 255, 0.7));
+"></div>
+      <img src="https://warcraft.wiki.gg/images/b/b3/Zeppelin_model.png" class="img-fluid" alt="Sample image" style="transform: scaleX(-1);z-index: 2;position: relative;">
+    </div>
+    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+      <div class="form-section">
+        <h1 style="margin-bottom: 1.5rem;">Register now !</h1>
+        <form method="POST">
+
+          <div data-mdb-input-init="" class="form-outline mb-4">
+            <label class="form-label" for="form3Example3">Email address</label>
+            <input type="username" id="username" name="username" class="form-control" placeholder="pro-player@xqt.gg">
+          </div>
+
+          <div data-mdb-input-init="" class="form-outline mb-3">
+            <label class="form-label" for="form3Example4">Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Enter password">
+          </div>
+
+          <div data-mdb-input-init="" class="form-outline mb-3">
+            <label class="form-label" for="form3Example4">Confirm Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Confirm password">
+          </div>
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" data-mdb-button-init="" data-mdb-ripple-init="" class="button button-secondary button-large button-outline" style="padding-top: 0.5rem;padding-bottom: .5rem;">Register</button>
+
+            <p class="small fw-bold mt-2 pt-1 mb-0">You already have an account ? <a href="#!" class="link-danger">Login</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
